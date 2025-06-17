@@ -260,6 +260,7 @@ footer {
   border-radius: 6px;
   box-shadow: 2px 2px 0 #e0a800;
   transition: transform 0.1s ease;
+  margin: 0 auto;
 }
 
 .boton-descarga:hover {
@@ -268,8 +269,8 @@ footer {
 
 .boton-inactivo {
   pointer-events: none;
-  opacity: 1; /* mantenemos el color, no grisamos */
   filter: grayscale(0.3) brightness(0.95);
   cursor: default;
 }
+
 
