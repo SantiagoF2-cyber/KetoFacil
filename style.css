@@ -250,4 +250,26 @@ footer {
   pointer-events: none;
 }
 
+.boton-descarga {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #1f1f1f;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #e0a800;
+  transition: transform 0.1s ease;
+}
+
+.boton-descarga:hover {
+  transform: translateY(-1px);
+}
+
+.boton-inactivo {
+  pointer-events: none;
+  opacity: 1; /* mantenemos el color, no grisamos */
+  filter: grayscale(0.3) brightness(0.95);
+  cursor: default;
+}
 
