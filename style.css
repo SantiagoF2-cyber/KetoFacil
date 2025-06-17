@@ -244,3 +244,8 @@ footer {
   }
 }
 
+.btn-inactivo {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none; /* Desactiva completamente el clic */
+}
