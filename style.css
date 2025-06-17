@@ -244,8 +244,10 @@ footer {
   }
 }
 
-.btn-inactivo {
+.boton-inactivo {
   opacity: 0.6;
   cursor: default;
+  pointer-events: none;
 }
+
 
