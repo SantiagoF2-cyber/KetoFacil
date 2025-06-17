@@ -1,0 +1,250 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: #f6fff8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2f6e4f;
+  border-bottom: 2px solid #cdeac0;
+  padding-bottom: 5px;
+}
+
+/* Ebook banner */
+.ebook-banner {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.ebook-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Recetas destacadas */
+.recetas-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.receta {
+  background: #fffde7;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.receta:hover {
+  transform: scale(1.02);
+}
+
+.receta img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.receta h3 {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #2f4f2f;
+}
+
+/* Lista beneficios */
+.benefits-list {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #2f6e4f;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-group a[href*="keto20guia"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-group a[href*="keto20guia"]:hover {
+  background-color: #218838;
+}
+
+.btn-group a[download] {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-group a[download]:hover {
+  background-color: #e0a800;
+}
+
+.btn[href^="mailto"] {
+  background: #6fba82;
+  color: #fff;
+}
+
+.btn[href^="mailto"]:hover {
+  background: #4e9f64;
+}
+
+.btn[href*="instagram"] {
+  background-color: #e1306c;
+  color: #fff;
+}
+
+.btn[href*="instagram"]:hover {
+  background-color: #c42e5c;
+}
+
+/* Enlaces */
+a {
+  color: #2f6e4f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e8f5e9;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Banner de portada animado */
+.banner-portada {
+  display: block;
+  margin: 30px auto;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeBounce 1.5s ease-out forwards;
+}
+
+/* Animación */
+@keyframes fadeBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {  /* 
+💡 TRUCO: Scroll horizontal para recetas en celular
+Permite deslizar horizontalmente las recetas en pantalla chica.
+Ideal para mantenerlas en una fila sin que se apilen.
+*/
+  .recetas-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .receta {
+    flex: 0 0 80%;
+    max-width: 80%;
+    scroll-snap-align: start;
+  }
+}
+
