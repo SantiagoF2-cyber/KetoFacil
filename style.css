@@ -229,11 +229,7 @@ footer {
     transform: scale(1);
   }
 }
-@media (max-width: 768px) {  /* 
-💡 TRUCO: Scroll horizontal para recetas en celular
-Permite deslizar horizontalmente las recetas en pantalla chica.
-Ideal para mantenerlas en una fila sin que se apilen.
-*/
+@media (max-width: 768px) {  
   .recetas-grid {
     flex-wrap: nowrap;
     overflow-x: auto;
